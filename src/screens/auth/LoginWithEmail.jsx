@@ -29,15 +29,15 @@ export const LoginWithEmail = () => {
     password: "",
   });
 
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
     signUp,
     updateLearningInfo,
     learningInfo,
-    loading,
-  ] = useContext(UserContext);
+    loading,}
+   = useContext(UserContext);
 
   const [errmsg, setErrMsg] = useState("");
 
@@ -205,7 +205,6 @@ const style = StyleSheet.create({
   },
   err: {
     fontSize: scale.fontPixel(15),
-    fontWeight: 600,
     lineHeight: scale.fontPixel(24),
     color: "#EDA4A4",
     fontFamily: "KALight",

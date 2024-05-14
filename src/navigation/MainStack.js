@@ -8,14 +8,14 @@ import { UserContext } from "../hooks/Context";
 const Stack = createSharedElementStackNavigator();
 
 export const MainStack = () => {
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
     signUp,
     updateLearningInfo,
     learningInfo,
-  ] = useContext(UserContext);
+  } = useContext(UserContext);
 
   const [isAuth, updateIsAuth] = useState(false);
 

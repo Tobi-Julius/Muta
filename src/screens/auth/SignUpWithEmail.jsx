@@ -46,7 +46,7 @@ export const SignUpWithEmail = () => {
       setErrMsg("");
     }
   };
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
@@ -54,7 +54,7 @@ export const SignUpWithEmail = () => {
     updateLearningInfo,
     learningInfo,
     loading,
-  ] = useContext(UserContext);
+  } = useContext(UserContext);
 
   return (
     <View style={style.container}>
@@ -234,7 +234,7 @@ const style = StyleSheet.create({
   },
   btnText: {
     color: "#1B1E26",
-    fontWeight: "bold",
+    fontFamily: "KASemiBold",
     textAlign: "center",
     textTransform: "uppercase",
   },
@@ -268,7 +268,6 @@ const style = StyleSheet.create({
   },
   err: {
     fontSize: scale.fontPixel(15),
-    fontWeight: 600,
     lineHeight: scale.fontPixel(24),
     color: "#EDA4A4",
     fontFamily: "KALight",

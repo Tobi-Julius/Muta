@@ -225,7 +225,6 @@ const style = StyleSheet.create({
   },
   err: {
     fontSize: scale.fontPixel(15),
-    fontWeight: 600,
     lineHeight: scale.fontPixel(24),
     color: "#EDA4A4",
     fontFamily: "KALight",

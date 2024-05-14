@@ -12,14 +12,14 @@ import { UserContext } from "../../hooks/Context";
 
 export const Proficiency = () => {
   const { goBack, navigate } = useNavigation();
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
     signUp,
     updateLearningInfo,
-    learningInfo,
-  ] = useContext(UserContext);
+    learningInfo,}
+  = useContext(UserContext);
   const [proficiency, updateProficiency] = useState("");
 
   const _pressHandler = () => {
@@ -32,7 +32,7 @@ export const Proficiency = () => {
       <SafeAreaView>
         <FlatList
           ListHeaderComponent={() => (
-            <>
+            <View>
               <Pressable onPress={() => goBack()}>
                 <Image
                   source={images.back}
@@ -45,7 +45,7 @@ export const Proficiency = () => {
                 text={`How would you rate your proficiency in ${learningInfo.langToLearn}?`}
                 textStyle={style.text}
               />
-            </>
+            </View>
           )}
           data={proficiencydata}
           contentContainerStyle={{
@@ -60,7 +60,7 @@ export const Proficiency = () => {
             />
           )}
           ListFooterComponent={() => (
-            <>
+            <View>
               <Button
                 disabled={proficiency === "" ? true : false}
                 onPress={() => _pressHandler()}
@@ -74,7 +74,7 @@ export const Proficiency = () => {
                   },
                 ]}
               />
-            </>
+            </View>
           )}
         />
       </SafeAreaView>
@@ -102,7 +102,7 @@ const style = StyleSheet.create({
   },
   btnText: {
     color: "#1B1E26",
-    fontWeight: "KASemiBold",
+    fontF: "KASemiBold",
     textAlign: "center",
   },
   btn: {

@@ -9,6 +9,8 @@ export const useFont = () => {
   SplashScreen.preventAutoHideAsync();
 
   const subscribe = async () => {
+    SplashScreen.preventAutoHideAsync();
+
     try {
       await Font.loadAsync({
         KABold: require("../assets/fonts/KABOLD.otf"),
@@ -28,7 +30,7 @@ export const useFont = () => {
   });
 
   const unSubscribe = async () => {
-    isFontReady ? SplashScreen.hideAsync() : null;
+    isFontReady === true ? SplashScreen.hideAsync() : subscribe();
   };
 
   useEffect(() => {

@@ -52,17 +52,3 @@ export const TextInput = ({
     />
   );
 };
-
-const styles = StyleSheet.create({
-  textInputStyle: {
-    height: scale.heightPixel(47),
-    borderRadius: scale.fontPixel(5),
-    paddingVertical: scale.pixelSizeVertical(4),
-    borderWidth: scale.widthPixel(1),
-    fontFamily: "Outfit_400Regular",
-    fontSize: scale.fontPixel(13),
-    paddingHorizontal: scale.pixelSizeHorizontal(16),
-    paddingVertical: scale.pixelSizeVertical(14),
-    borderColor: "#F0F0F0",
-  },
-});

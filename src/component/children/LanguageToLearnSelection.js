@@ -49,7 +49,7 @@ const style = StyleSheet.create({
     width: scale.widthPixel(64),
   },
   text: {
-    fontFont: "KASemiBold",
+    fontFamily: "KAMedium",
     fontSize: scale.fontPixel(16),
     lineHeight: scale.fontPixel(32),
     marginTop: scale.pixelSizeVertical(25),

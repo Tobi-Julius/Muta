@@ -92,7 +92,6 @@ const style = StyleSheet.create({
   },
   getstartedText: {
     color: "#1B1E26",
-    // fontWeight: "bold",
     textAlign: "center",
     fontFamily: "KASemiBold",
   },
@@ -109,7 +108,6 @@ const style = StyleSheet.create({
   },
   loginText: {
     color: "#BBECED",
-    // fontWeight: "bold",
     textAlign: "center",
     fontFamily: "KASemiBold",
   },

@@ -14,14 +14,14 @@ export const LanguageSelection = () => {
   const { goBack, navigate } = useNavigation();
   const [selectedId, updateSelectedId] = useState("");
 
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
     signUp,
     updateLearningInfo,
-    learningInfo,
-  ] = useContext(UserContext);
+    learningInfo,}
+  = useContext(UserContext);
 
   const _pressHandler = () => {
     updateLearningInfo({ ...learningInfo, langUserSpeak: selectedId.lang });
@@ -78,7 +78,6 @@ const style = StyleSheet.create({
   },
   btnText: {
     color: "#1B1E26",
-    // fontWeight: "bold",
     textAlign: "center",
     fontFamily: "KASemiBold",
   },

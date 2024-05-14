@@ -83,7 +83,6 @@ const style = StyleSheet.create({
   subText: {
     fontSize: scale.fontPixel(14),
     lineHeight: scale.fontPixel(20),
-    fontWeight: 400,
     color: "#ABB3C7",
     fontFamily: "KALight",
   },

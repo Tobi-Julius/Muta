@@ -40,7 +40,7 @@ export const Home = () => {
         <View>
           <FlatList
             ListHeaderComponent={() => (
-              <>
+              <View>
                 <View style={style.card}>
                   <View>
                     <View>
@@ -119,7 +119,7 @@ export const Home = () => {
                   <Text text={"Leaderboard"} textStyle={style.leaderboard} />
                   <Entypo name="chevron-right" size={24} color="#C6CFE5" />
                 </View>
-              </>
+              </View>
             )}
             data={leaderData}
             key={({ item }) => item.id}

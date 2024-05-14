@@ -1,7 +1,8 @@
 import React, { createContext, useState } from "react";
 import axios from "axios";
-export const UserContext = createContext();
 import { Alert } from "react-native";
+
+export const UserContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, updateCurrentUser] = useState("");
@@ -88,7 +89,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={[
+      value={{
         currentUser,
         updateCurrentUser,
         signIn,
@@ -96,7 +97,7 @@ export const AuthProvider = ({ children }) => {
         updateLearningInfo,
         learningInfo,
         loading,
-      ]}
+      }}
     >
       {children}
     </UserContext.Provider>

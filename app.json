@@ -9,22 +9,29 @@
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1B1E26"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.oliverdam.Muta"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.oliverdam.Muta"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0c82c294-039e-4b91-964f-81fae0dbbcf0"
+      }
+    }
   }
 }

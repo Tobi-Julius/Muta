@@ -14,14 +14,14 @@ export const LanguageToLearnSelection = () => {
   const { goBack, navigate } = useNavigation();
   const [lang, setLang] = useState("");
 
-  const [
+  const {
     currentUser,
     updateCurrentUser,
     signIn,
     signUp,
     updateLearningInfo,
-    learningInfo,
-  ] = useContext(UserContext);
+    learningInfo,}
+  = useContext(UserContext);
 
   const _pressHandler = () => {
     updateLearningInfo({ ...learningInfo, langToLearn: lang.text });
@@ -33,7 +33,7 @@ export const LanguageToLearnSelection = () => {
       <SafeAreaView>
         <FlatList
           ListHeaderComponent={() => (
-            <>
+            <View>
               <Pressable onPress={() => goBack()}>
                 <Image
                   source={images.back}
@@ -43,7 +43,7 @@ export const LanguageToLearnSelection = () => {
                 />
               </Pressable>
               <Text text={"I want to learn..."} textStyle={style.text} />
-            </>
+            </View>
           )}
           showsVerticalScrollIndicator={false}
           key={({ item, index }) => item.id}
@@ -59,7 +59,7 @@ export const LanguageToLearnSelection = () => {
           columnWrapperStyle={{ gap: scale.width * 0.09 }}
           numColumns={2}
           ListFooterComponent={() => (
-            <>
+            <View>
               <Button
                 disabled={lang === "" ? true : false}
                 onPress={() => _pressHandler()}
@@ -72,7 +72,7 @@ export const LanguageToLearnSelection = () => {
                   },
                 ]}
               />
-            </>
+            </View>
           )}
         />
       </SafeAreaView>
@@ -100,7 +100,6 @@ const style = StyleSheet.create({
   },
   btnText: {
     color: "#1B1E26",
-    // fontWeight: "bold",
     textAlign: "center",
     fontFamily: "KASemiBold",
   },
